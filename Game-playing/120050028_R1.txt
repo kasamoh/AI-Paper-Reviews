@@ -1,0 +1,18 @@
+Rohit Kumar
+120050028
+
+Primary reference : Practical Issues in Temporal Difference Learning, Gerald Tesauro, 1992
+
+The paper talks about issues which are associated with TD (temporal difference) learning from a theoritical point of view in large scale and complex domains. A lot of cases have been shown where the problems are out of scope of TD algorithm. The paper tells that for tasks which are non-Markovian or have multiple outcomes or where the environment is noisy, the input space is huge and these issues hasn't been addressed by Sutton. Here, the paper could have provided practical examples to demonstate the specific cases, but it's not. From an algorithmic perspective also, certain issues are presented like failure to provide convergence at an optimal solution(both global and local). 
+
+Due to absence of theoretical guidance, the paper empirically examine practical issues within the context of a specific application i.e. learning to play backgammon using the outcome of self-play. The TD algorithm has been applied in steps. Firstly there are less rules taken into consideration and finally the algorithm for entire game with complete rules has been developed by adding extentions to previous steps. 
+
+The first strategy descibed is "disengaged bearoff strategy" where both sides have all of their men in the their home quadrant and can remove them from the board. Then a complex startegy, "full-board racing strategy" is discussed in which if one has men in the outer quadrants, it chooses between playing for a win and avoiding the loss of a gammon. Finally hitting and blocking are introduced and combined with the previos strategies.
+
+The TD algorithm has been compared with other algorithms like supervised learning etc. against various parameters like no. of hidden nodes in neural network etc.
+
+Some of the interesting results was that, apart from stochastic fluctuations controlled by the value of alpha, the absolute prediction error always decreased during training. On the other hand, the move-selection performance usually reached a maximum after several tens of thousands of games, and then decreased thereafter. This is justified as due to the stochastic training procedure and the relatively flat nature of the learning curves, it is difficult to say precisely when the maximum performance was reached. This phenomena has been stated as "overtraining" which could be due to the differing distributions of training and test positions.
+
+It's not clear in the paper how the parameters of TD learning like alpha and lambda affect the training of the gammon, although they have used trial and error approach to find the effective values. Also, the author seems to have left out algorithms which combine principles of TD and other algorithms like back-propagation or supervised learning. For some of the conclusions such as the solution being converged to a good local optimal, no theoritical support has been provided (since TD doesn't guarantee any such claims as stated earlier in the paper). 
+
+Overall the paper provided a concrete support for TD algorithms by providing a practical applications. The experimentation part of the paper seem too long. The reference paper (TD-Gammon, A Self-Teaching Backgammon Program, Achieves Master-level Play, Gerald Tesauro, 1993) talks about TD-Gammon which is a neural network based algorithm based on TD(lambda) reinforcement learning algorithm. It is stated that it plays at a strong master level that is extremely close to the world’s best human players.

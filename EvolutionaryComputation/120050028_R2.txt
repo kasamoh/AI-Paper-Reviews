@@ -1,0 +1,22 @@
+Rohit Kumar
+120050028
+
+Evolutionary Computation
+
+Primary reference : Evolutionary Algorithms for Reinforcement Learning; David E. Moriarty, Alan C. Schultz, and John J. Greffenstette, 1999
+
+The paper talks about issues in normal reinforcement learning and provides solutions to some of those issues by applying evolutionary computation to them. It suggests some modifications to EAs (Evolutionary Algorithms) which can be adapted by RL.
+
+Searching in value space(via RL) and in the policy space(via EA) are the two distinct approaches. The problem with widely used RL algorithms like TD or Q-learning (offline TD) is that the state space can be huge in several cases and it might be computationally infeasible to find the optimal policy. EAs like genetic algorithm use heuristics to find a near optimal solution. Other paradigms like supervised learning cannot be used to design agents as it may be impossible to label (with reward) a particular state-action pair without referring to agent's subsequent decisions.
+
+The simplest way to represent a policy in EA is to use one chromosome(i.e. individual) per policy such that each gene represents a state and the value contained in it is the corresponding action. With this representation standard genetic operators like mutation and crossover are applied. The fitness of a chromosome(policy) is determined by a single trial ending at a terminal state. Policies which are more fit yield more offspring for the next stage of the algorithm.
+
+The paper then moves(from generic EAs) to design representations that are useful for RL, develpos proper models for fitness evaluation and defines some genetic operators which are specific to RL. Two representations have been proposed, the first one being distributed rule based policies in which a policy is decomposed into various components which are mutually exclusive and can be learned independently. But it's not clear how to determine such components and decompose a policy from the paper. Further the components are clubbed to a single chromosome using Learning Classifier Model. A component may be mapped to more than one chromosome. In such conflicting case, the resolution is done by associating a strength value to each chromosome. The second approach is based on neural networks where a chromosome is made of the weights of the network.
+
+Different fitness functions can be associated with different components. Each classifier/chromosome has a strength(stated above) which is calculated by a TD like algorithm called the bucket brigade.
+
+Some new genetic operators are introduced such as triggered operator which was responsible for creating a new classifier. Various strengths of EARLs are shown which includes scaling to large state spaces, dealing with incomplete state information (e.g. in real world situations, where the agent's sensors are more likely to provide only a partial view that may fail to disambiguate many states) and addressing to environments which are non-stationary in nature. 
+
+EARLs cannot work in an offline fashion because to evaluate policies it would take hundreds of generations to go through. Optimality proofs which exists for EARLs are not applicable in realistic RL problems. 
+
+Further work that can be done is to develop an approach based on model of PAC(probably approximately correct) learning where the performance of algorithm is measured by how many learning samples are required before converging to a correct hypothesis within specified error bounds. Some successful examples of EARLS are provided which use different representations of policies.
