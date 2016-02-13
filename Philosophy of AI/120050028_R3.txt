@@ -1,0 +1,22 @@
+Rohit Kumar
+120050028
+
+Philosophy of AI
+
+Primary reference : The Chinese Room Argument, John Searle, 2006
+
+The paper describes a thought experiment to refute the ideologies of strong AI i.e. a properly programmed digital computer capable of passing the Turing test would have a mind similar to that of a human. The key objective is to distinguish between symbolic/syntactic meaning and the semantic meaning of a system.
+
+The thought experiment is to send Chinese questions to a native English speaker which has access only to a database of Chinese symbols and a program to manipulate them. The person receives Chinese questions and returns the answers to these questions by following the instructions provided by the program. Although the person is able to answer every question eventually but it doesn't understands the meaning of any of those Chinese sentences. The answers to the questions are equally good to that of a native Chinese speaker because of the appropriate program available.
+
+The first result that is stated is that computer programs are presented entirely in terms of symbolic or syntactic operations rather minds, which present the meaning or the semantics. The programs cannot ensure the presence of these semantics or mental contents through the Turing test. Finally the experiment concludes that by itself, the program is insufficient to constitute or guarantee the presence of proper semantics/mental states.
+
+The argument has been backed up by a strong fundamental logic that simulating a system is not equivalent to duplicate it. For example, a rainstorm cannot be produced by performing a computer simulation of the process or you cannot produce wealth by doing a simulation of producing it. In this way understanding, thought processes and cognitive sciences cannot be created just by doing a computer simulation of the understanding or the thought process.
+
+The paper also provides responses to some of the arguments against the thought experiment. These are described as follows:
+
+1) The first argument is that the person is only a small element of the entire system consisting of the room, the program and the database. The paper replies that the person is no different from the whole system. Even if the person memorizes the complete database, the program and is capable of performing the required calculations etc., the person would not be able to understand the semantics of the Chinese language.
+
+2) The second one is to simulate the actual operations of a Chinese person's brains activity when that person is on the process of understanding the Chinese sentence. If these could be reproduced in the form of a perfect computer simulation of all the synaptic transmissions in the person's brain. Since the brain operates through a series of state transition, it should be possible to produce a perfect replica of these state transitions. The reply that is provided in the paper is that the actual process is biological where chemicals such as enzymes etc. are involved and is not merely a matter of zeroes and ones as in computer simulation in the same manner as simulating reproduction (with zeroes and ones) cannot produce babies.
+
+The paper finally concludes with clearing some misconceptions related to the Chinese room experiment and proposes that for the creation of an artificial mind, actual duplication is required which isn't simply simulation. Here, like the actual brains they have to cause consciousness and cognition. Overall, the paper was easy to follow. Further work may include what makes it tough to duplicate an actual brain which includes creating a suitable environment for the same.
