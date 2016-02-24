@@ -1,0 +1,23 @@
+Rohit Kumar
+120050028
+
+Primary reference : Bandit based Monte-Carlo Planning, Levente Kocsis and Csaba Szepesvari
+
+The paper describes an algorithm called UCT, which applies UCB (Upper Confidence Bound) algorithm for rollout based Monte Carlo Planning. It also shows theoretical results which proves that this new algorithm is consistent and experimental results which indicate that UCT has a significant performance advantage over its closest competitors.
+
+The main idea of the algorithm proposed in this paper is to sample actions selectively. In order to achieve this, an efficient algorithm must balance between testing alternatives that look currently the best so as to obtain precise estimates, and the exploration of currently suboptimal-looking alternatives, so as to ensure that no good alternatives are missed because of early estimation errors. The problem of finding the right balance is known as the the exploration-exploitation dilemma. This problem is modeled in the paper through multi-armed bandits.
+
+The Monte Carlo rollout-based algorithm builds a look-ahead tree by repeatedly sampling episodes from the initial state. It allows keeping track of estimates of the actions values at the sampled states encountered so far in earlier episodes. If some state is encountered again then the estimated action-values can be used to bias the choice of the next action that should be taken. This speeds up the convergence of the value estimates. 
+
+The generic scheme of rollout-based Monte-Carlo planning iteratively generates episodes, and returns the
+action with the highest average observed long-term reward. The total reward (discounted reward) is used to adjust the estimated value for the given state-action pair at the given depth, completed by increasing the counter that stores the number of visits of the state-action pair at the given depth. An approximate way to implement this algorithm, that is stated in the paper, is to stop the episodes with probability that is inversely proportional to the number of visits to the state.
+
+The effectiveness of the whole algorithm mainly depends on how the actions are selected as described in the above paragraph. In naive Monte-Carlo planning the actions are sampled uniformly. The main contribution of the present paper is the introduction of a bandit-algorithm for the implementation of the selective sampling of actions.
+
+In UCT, the action selection problem is treated as a separate multi-armed bandit for every (explored) internal node. The arms correspond to actions and the payoffs to the cumulated (discounted) rewards of the paths originating at the
+nodes. In state s, at depth d, the action that maximizes Q value plus a bias sequence (as in UCB1), which depends on the number of times state s has been and the number of times action a was selected when state s has been visited is selected.
+
+Theoretical analysis of the algorithm has been provided. An important result is that for a finite-horizon MDP with rewards scaled to lie in the [0, 1] interval, considering the horizon of the MDP be D, and the number of actions per state be K, the algorithm UCT (such that the bias terms of UCB1 are multiplied by D), the bias of the estimated expected payoff, is O(log(n)/n). Further, the failure probability at the root converges to zero at a polynomial rate as the number of episodes grows to infinity. Several experimentation with random game trees and MDPs has been shown.
+
+The paper concludes with showing related research in rollout based Monte-Carlo planning in undiscounted MDPs with
+selective action sampling. Overall, the paper gives a good example of how different algorithms can be combined effectively to provide a better solution. The examples shown by the paper could be extended to more complex games like Chess or Go.
