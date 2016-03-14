@@ -1,0 +1,16 @@
+Rohit Kumar
+120050028
+
+Primary reference : Labeling Images with a Computer Game; Luis von Ahn and Laura Dabbish
+
+The paper describes an image labelling based game which they leverage to crowdsource labelling of images to provide more accurate image search, aim to describe images to visually impaired individuals, and help users to block inappropriate images. Computer vision techniques don't work well enough and manual labelling is extremely tedious and costly and there is a need to encourage people to do the work by taking advantage of their desire to be entertained.
+
+The game described is played online by a large number of pairs of people. The partners are assigned randomly and players don't know about their partner neither they can communicate in any manner. The goal of the game is to agree upon a common string for an image displayed to both players of the pair. The pair moves to the next image when both of them have predicted a common string, which need not be in the same point of time. The success of players are reinforced by providing them bonus points for completing a set of images as well as points for each image which encourages them to keep playing. 
+
+Players cannot enter a set of special words called taboo words which are generic descriptions of the image. The logic behind this is that in most of the cases the initial agreement of label for a particular image are general ones e.g. "man", "dog" etc. and eliminating them for the purpose of labelling pushes the players to provide guesses which are more specific in nature. This also helps to get more labels for a given image.
+
+Agreement by a pair of players for a label of an image implies that the label is probably meaningful. Although other guesses that players enter can also be utilized for other purposes which are not described in the paper. For attaching a label with an image, certain number of pair agreements has to be met. An image is eliminated from the game when it has fetched an extensive list of taboo words and the pairs are finding it difficult to agree on new labels. In this case players will keep on passing the image which will notify the server that either the image is too complex to label or there has already been too many labellings.
+
+A lot of strategies have been shown to eliminate cheating in the game for e.g. players may enter strings like "a" for every image. IP tracking is used to ensure that players don't partner with themselves. Inappropriate images for children e.g. pornography are removed to make them playable for children. 
+
+Crowdsourcing in general is not a new concept. A lot of data analytics are based on it. This paper takes a very ambitious approach to take it to a huge level. The approach described is also implementable as the user experience is pretty good. The paper claims in its evaluation part that if 5000 people continuously play this game, then every image that has been indexed by Google can be labelled in just 31 days.
